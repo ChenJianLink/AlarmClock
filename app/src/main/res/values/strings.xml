@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">小V提醒</string>
+    <string name="main_title">闹钟列表</string>
+    <string name="crate_new">新建</string>
+    <string name="set_clock_title">设置闹钟</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="save">保存</string>
+    <string name="setting_repeat">重复</string>
+    <string name="repeat_once">只响一次</string>
+    <string name="description">设置</string>
+    <string name="clock_setting_tag">备注</string>
+    <string name="clock_setting_shake">振动</string>
+    <string name="default_clock_ring_music">无</string>
+    <string name="clock_ring_music">铃声</string>
+    <string name="close_clock">关闭</string>
+    <string name="ring_later">稍后提醒</string>
+    <string name="system_music">预设铃声</string>
+    <string name="channel_name">响铃通知</string>
+    <string name="channel_description">create_foreground_service_when_user_used</string>
+</resources>

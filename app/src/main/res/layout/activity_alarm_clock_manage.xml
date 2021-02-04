@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AlarmClockManageActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/set_clock_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:title="@string/set_clock_title"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/setting_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/cancel"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/setting_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/save"
+            tools:ignore="ButtonStyle,RtlHardcoded" />
+    </LinearLayout>
+
+    <TimePicker
+        android:id="@+id/clock_time_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:timePickerMode="spinner"
+        app:layout_constraintTop_toBottomOf="@id/set_clock_toolbar"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/next_ring_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clock_time_picker"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/clock_time_picker"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/next_ring_time"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout style="@style/alarm_clock_setting"
+                android:id="@+id/ring_repeat">
+
+                <LinearLayout style="@style/alarm_clock_setting_lin">
+
+                    <TextView
+                        style="@style/clock_text_setting1"
+                        android:text="@string/setting_repeat" />
+
+                    <TextView
+                        android:id="@+id/alarm_clock_setting_repeat"
+                        style="@style/clock_text_setting2"
+                        android:text="@string/repeat_once" />
+                </LinearLayout>
+
+                <ImageView
+                    style="@style/alarm_clock_img"
+                    android:contentDescription="@string/description" />
+            </RelativeLayout>
+
+            <View style="@style/dividing_line" />
+
+            <RelativeLayout style="@style/alarm_clock_setting"
+                android:id="@+id/clock_ring_music">
+
+                <LinearLayout style="@style/alarm_clock_setting_lin">
+
+                    <TextView
+                        style="@style/clock_text_setting1"
+                        android:text="@string/clock_ring_music" />
+
+                    <TextView
+                        android:id="@+id/clock_setting_ring_music"
+                        style="@style/clock_text_setting2"
+                        android:singleLine="true"
+                        android:text="@string/default_clock_ring_music" />
+                </LinearLayout>
+
+                <ImageView
+                    style="@style/alarm_clock_img"
+                    android:contentDescription="@string/description" />
+            </RelativeLayout>
+
+            <View style="@style/dividing_line" />
+
+            <RelativeLayout style="@style/alarm_clock_setting">
+
+                <CheckBox
+                    android:id="@+id/clock_is_vibrated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dip" />
+
+                <TextView
+                    style="@style/clock_text_setting1"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/clock_setting_shake" />
+            </RelativeLayout>
+
+            <View style="@style/dividing_line" />
+
+            <RelativeLayout style="@style/alarm_clock_setting"
+                android:id="@+id/clock_tag">
+
+                <LinearLayout style="@style/alarm_clock_setting_lin">
+
+                    <TextView
+                        style="@style/clock_text_setting1"
+                        android:text="@string/clock_setting_tag" />
+
+                    <TextView
+                        android:id="@+id/clock_setting_tag"
+                        style="@style/clock_text_setting2"
+                        android:ellipsize="end"
+                        android:maxEms="10"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    style="@style/alarm_clock_img"
+                    android:contentDescription="@string/description" />
+            </RelativeLayout>
+
+            <View style="@style/dividing_line" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
