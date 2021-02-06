@@ -30,7 +30,7 @@ public class AlarmClockRepository {
      */
     private final ExecutorService executor;
 
-    public AlarmClockRepository(final Context context) {
+    public AlarmClockRepository(Context context) {
         alarmClockDao = BaseAlarmClockDatabase.getDatabase(context).getAlarmClockDao();
         alarmClockList = alarmClockDao.selectAll();
         executor = new ThreadPoolExecutor(2, 4, 1, TimeUnit.MINUTES, new SynchronousQueue<Runnable>(), new ThreadPoolExecutor.DiscardOldestPolicy());
