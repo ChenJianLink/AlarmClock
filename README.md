@@ -11,5 +11,5 @@
 有了这些基本功能，其他的功能对于闹钟来说是锦上添花
 
 ## 系统架构图
-除了确定产品需求，还需要架构设计，该应用的架构图如下(对应的[Visio图](README/系统架构图.vsdx))：
-![系统架构图](README/系统架构图.jpg)
+除了确定产品需求，还需要架构设计，该应用的架构图如下(对应的[Visio图](README/System_architecture_diagram.vsdx))：
+![系统架构图](README/System_architecture_diagram.jpg)
